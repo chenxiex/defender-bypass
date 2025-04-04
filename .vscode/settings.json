@@ -1,0 +1,19 @@
+{
+    "makefile.configurations": [
+        {
+            "name": "mingw",
+            "makeArgs": ["PLATFORM=mingw"]
+        },
+        {
+            "name": "windows",
+            "makeArgs": ["PLATFORM=windows"]
+        }
+    ],
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/workspaces/360-bypass/build",
+            "binaryPath": "/workspaces/360-bypass/build/encode",
+            "binaryArgs": []
+        }
+    ]
+}
