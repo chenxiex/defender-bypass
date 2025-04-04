@@ -3,12 +3,6 @@ CC = cl
 
 PLATFORM ?= windows
 
-ifeq ($(PLATFORM), windows)
-	CC = cl
-else ifeq ($(PLATFORM), mingw)
-	CC = x86_64-w64-mingw32-gcc
-endif
-
 .PHONY: all clean mkdir
 
 all: encode main

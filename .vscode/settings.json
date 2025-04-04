@@ -2,11 +2,12 @@
     "makefile.configurations": [
         {
             "name": "mingw",
-            "makeArgs": ["PLATFORM=mingw"]
+            "makeArgs": [
+                "CC=x86_64-w64-mingw32-gcc",
+            ]
         },
         {
             "name": "windows",
-            "makeArgs": ["PLATFORM=windows"]
         }
     ]
 }
