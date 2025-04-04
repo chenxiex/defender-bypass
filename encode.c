@@ -4,7 +4,7 @@ int main()
 {
     FILE *infile;
     FILE *outfile;
-    int ch; // 修改类型为 int
+    int ch;
     infile = fopen("input.bin", "rb");
     if (infile == NULL)
     {
