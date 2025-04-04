@@ -1,16 +1,30 @@
-# 360-bypass
-c++免杀绕过360,vt爆4个
+# defender-bypass
+C语言免杀绕过 Windows Defender
 
+## 编译
+### Windows:
 
-![n](https://github.com/wz-wsl/360-bypass/blob/main/3_pass.png)
-![j](https://github.com/wz-wsl/360-bypass/blob/main/4_pass.png)
+```bash
+make clean
+make
+```
 
-使用须知:
-   1.本工具的文章地址https://forum.butian.net/share/1805 (文章公布后就可以看到了)
+### Linux (mingw):
 
-   2.把shellcode放在encode.py里，然后会生成一个名为sc.ini的文件
+```bash
+make clean
+make PLATFORM=mingw
+```
 
-   3.然后把cpp编译成exe，把exe和sc.ini放在同一个目录运行exe即可
+## 运行
+需要在 Windows 环境下运行。
 
+首先将 `payload` 编码
 
-4.在命令行使用的时候，需要cd到exe和sc.ini文件所在的目录，不然无法上线!!!
+```bash
+cd build
+cp /path/to/payload input.bin
+./encode.exe
+```
+
+得到的 `output.bin` 和 `main.exe` 一起分发。执行时放在同一个文件夹下双击执行即可。如果从命令行执行，需要确保工作目录为 `output.bin` 和 `main.exe` 所在文件夹。
