@@ -9,6 +9,8 @@ make clean
 make
 ```
 
+也可以使用 `Visual Studio` 编译。分别编译 `encode.c` 和 `main.c` 即可。
+
 ### Linux (mingw):
 
 ```bash
