@@ -1,23 +1,22 @@
 CFLAGS = -Wall -Wextra -O0 -static
 CC = cl
-
-PLATFORM ?= windows
+BUILD_DIR = build
 
 .PHONY: all clean mkdir
 
-all: encode main
+all: $(BUILD_DIR)/encode.exe $(BUILD_DIR)/main.exe
 
 mkdir:
 	@mkdir -p build
 
-encode: encode.o mkdir
-	$(CC) $(CFLAGS) -o build/encode encode.o
+$(BUILD_DIR)/encode.exe: encode.o mkdir
+	$(CC) $(CFLAGS) -o $(BUILD_DIR)/encode.exe encode.o
 
 encode.o: encode.c
 	$(CC) $(CFLAGS) -c encode.c
 
-main: main.o mkdir
-	$(CC) $(CFLAGS) -o build/main main.o
+$(BUILD_DIR)/main.exe: main.o mkdir
+	$(CC) $(CFLAGS) -o $(BUILD_DIR)/main.exe main.o
 
 main.o: main.c
 	$(CC) $(CFLAGS) -c main.c
