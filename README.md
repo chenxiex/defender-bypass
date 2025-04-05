@@ -2,21 +2,22 @@
 C语言免杀绕过 Windows Defender
 
 ## 编译
-### Windows:
 
 ```bash
 make clean
 make
 ```
 
-也可以使用 `Visual Studio` 编译。分别编译 `encode.c` 和 `main.c` 即可。
-
-### Linux (mingw):
+可以通过`CC`指定希望使用的`C`编译器。例如，如果希望在 Linux 上通过 mingw 交叉编译：
 
 ```bash
 make clean
 make CC=x86_64-w64-mingw32-gcc
 ```
+
+编译成果位于 `build` 文件夹。
+
+也可以使用 `Visual Studio` 编译。分别编译 `encode.c` 和 `main.c` 即可。
 
 ## 运行
 需要在 Windows 环境下运行。
